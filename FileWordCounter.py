@@ -1,29 +1,38 @@
 #Developed by Sergio Gonzalez
 #Text File Word Counter
 
-Text = input("Insert text path: ")
+finishProgram = "y"
 
-readTextFile = open(Text,"r")
+while finishProgram == "y":
 
-StringTxt = readTextFile.read().replace("\n", " ")
-sepWords = StringTxt.split(" ")
+    Text = input("Insert text path: ")
+    readTextFile = open(Text,"r")
 
-notValidWords = 0
-for word in sepWords:
-    if word == "":
-        notValidWords += 1
-    else:
-        continue
+    StringTxt = readTextFile.read().replace("\n", " ")
+    sepWords = StringTxt.split(" ")
 
-wordCount = (len(sepWords) - notValidWords)
+    notValidWords = 0
+    for word in sepWords:
+        if word == "":
+            notValidWords += 1
+        else:
+            continue
 
+    wordCount = (len(sepWords) - notValidWords)
+    readTextFile.close()
 
-readTextFile.close()
+    print("\n")
+    print("**************************")
+    print(f'The file has {wordCount} words')
+    print("**************************")
+    print("\n")
+
+    finishProgram = input("Do you want to continue? y/n \n")
+
 
 print("\n")
 print("**************************")
-print(f'The file has {wordCount} words')
+print("Thank U for using Word Counter")
 print("**************************")
 print("\n")
-
 
