@@ -4,4 +4,4 @@
 sentence=input("Wirte your sentence: ")
 wordCount=len(sentence.split(" "))
 
-print(f'{sentence} has {wordCount} words')
+print(f'{sentence} has {wordCount} words') 
